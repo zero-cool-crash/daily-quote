@@ -38,9 +38,9 @@
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         img-src 'self' https: data:;
-        connect-src 'self';
+        connect-src 'self' https://cloudflareinsights.com;
         style-src 'self' 'unsafe-inline';
-        script-src 'self' https://pagead2.googlesyndication.com https://pagead2.googlesyndication.com/pagead/js/*;
+        script-src 'self' https://pagead2.googlesyndication.com https://pagead2.googlesyndication.com/pagead/js/* https://static.cloudflareinsights.com;
         frame-src https://*.googlesyndication.com https://*.google.com;
         object-src 'none';
         base-uri 'self';
@@ -105,5 +105,8 @@
     ========================================================= -->
     <script src="script.js"></script>
 
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e2ef8944c808484183336a91832bf2d7"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
